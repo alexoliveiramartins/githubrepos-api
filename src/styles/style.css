@@ -1,0 +1,61 @@
+* {
+  font-family: sans-serif;
+  justify-content: center;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+#app {
+  width: 550px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#repository-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#repositories-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: aliceblue;
+}
+
+.stars h2 {
+  margin: 2px;
+}
+
+.stars img {
+  width: 30px;
+  height: 30px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.titleAndUrl h2 {
+  margin: 0;
+}
+
+.titleAndUrl a {
+  font-size: small;
+}

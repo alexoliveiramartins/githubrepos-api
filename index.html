@@ -2,13 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>github-repositories</title>
   </head>
   <body>
     <div id="app">
       <h1>Github Repositories Listing App</h1>
+      <form id="repoSearchForm">
+
+        <input placeholder="torvalds" id="repoSearchInput" type="text" />
+        <button type="submit">Search</button>
+      </form>
+
+      <!-- <div id="repositories-list">
+        <div class='repositoryItem'>
+          <div class='titleAndUrl'>
+            <h2>github-repositories</h2>
+            <a href src='https://github.com/alexoliveiramartins/github-repositories'>https://github.com/alexoliveiramartins/github-repositories</a>
+          </div>
+          <div class='stars'>
+            <h2>3</h2>
+            <img src="star-svgrepo-com.svg" style="width: 30px; height: 30px;"/>
+          </div>
+        </div>
+      </div> -->
+      
+      <div id="repositories-list"></div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
