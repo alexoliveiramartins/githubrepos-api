@@ -1,8 +1,3 @@
-// https://api.github.com/repos/alexoliveiramartins/linketinder
-// https://api.github.com/repos/{user}/{repository}
-// https://api.github.com/users/alexoliveiramartins/repos
-// https://api.github.com/users/{user}/repos
-
 import axios from 'axios';
 import { Repository } from '../models/repository';
 
