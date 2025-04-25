@@ -9,7 +9,7 @@ import { Repository } from '../models/repository';
 export async function getRepos(searchParam: String): Promise<Repository[]> {
     let repositoriesArray: Repository[] = [];
     try {
-        const response = await axios.get(`https://api.github.com/search/repositories?q=${searchParam}`)
+        const response = await axios.get(`https://api.github.com/search/repositories?q=${searchParam}+in:name&sort=stars&order=desc`)
         const repos = response.data.items;
         repos.forEach((element: any) => {
             let repository = new Repository(element.name, element.stargazers_count, element.html_url)
