@@ -14,7 +14,7 @@ export function repositoryItemHtml(repository: Repository, parentDiv: HTMLDivEle
     const starsDiv = document.createElement('div');
     starsDiv.className = 'stars'
 
-    const starsCount = document.createElement('h2');
+    const starsCount = document.createElement('p');
     starsCount.innerText = `${repository.stars}`
 
     const starImg = document.createElement('img');
@@ -26,7 +26,12 @@ export function repositoryItemHtml(repository: Repository, parentDiv: HTMLDivEle
     starsDiv.appendChild(starsCount);
     starsDiv.appendChild(starImg);
 
-    parentDiv.appendChild(titleAndUrl);
-    parentDiv.appendChild(starsDiv);
+    const repositoryItem = document.createElement('div');
+    repositoryItem.className = 'repositoryItem';
+
+    repositoryItem.appendChild(titleAndUrl);
+    repositoryItem.appendChild(starsDiv);
+
+    parentDiv.appendChild(repositoryItem);
 }
 

@@ -8,11 +8,43 @@ body {
   height: 100%;
   margin: 0;
   width: 100%;
-}
-
-body {
   align-items: center;
   background-color: #f2f2f2;
+}
+
+.searchDiv {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#repoSearchForm input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 15px;
+}
+#repoSearchForm {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 5px;
+}
+#repoSearchForm input:focus {
+  outline: 2px solid black;
+}
+#repoSearchForm button {
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #cfcfcf;
+  background-color: white;
+  border-radius: 4px;
+}
+#repoSearchForm button:hover {
+  background-color: rgb(231, 231, 231);
 }
 
 #app {
@@ -23,28 +55,34 @@ body {
   flex-direction: column;
 }
 
-#repository-item {
+.repositoryItem {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 10px;
+  margin: auto;
+  background-color: rgb(224, 224, 224);
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 #repositories-list {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  background-color: aliceblue;
+  gap: 10px;
 }
 
-.stars h2 {
-  margin: 2px;
+.titleAndUrl h2 {
+  font-size: 20px;
 }
 
 .stars img {
   width: 30px;
   height: 30px;
+  padding-top: 7px;
+  opacity: 80%;
 }
 
 .stars {

@@ -9,8 +9,12 @@ let repositoriesList: Repository[];
 document.getElementById('repoSearchForm')?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const divElements = document.getElementById('repositories-list') as HTMLDivElement;
+    document.getElementById('repositories-list')?.remove();
+
+    const divElements = document.createElement('div');
+    divElements.id = 'repositories-list';
     divElements.innerHTML = '';
+    document.getElementById('app')?.appendChild(divElements);
 
     repositoriesList = [];
 

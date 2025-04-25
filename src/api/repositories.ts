@@ -6,16 +6,16 @@
 import axios from 'axios';
 import { Repository } from '../models/repository';
 
-export async function getRepos(user: String): Promise<Repository[]> {
+export async function getRepos(searchParam: String): Promise<Repository[]> {
     let repositoriesArray: Repository[] = [];
     try {
-        const response = await axios.get(`https://api.github.com/users/${user}/repos`)
-        const repos = response.data;
+        const response = await axios.get(`https://api.github.com/search/repositories?q=${searchParam}`)
+        const repos = response.data.items;
         repos.forEach((element: any) => {
             let repository = new Repository(element.name, element.stargazers_count, element.html_url)
             repositoriesArray.push(repository)
+            console.log(element);
         });
-
     }
     catch (error) {
         console.log(error);

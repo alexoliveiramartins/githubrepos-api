@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,26 +8,12 @@
   <body>
     <div id="app">
       <h1>Github Repositories Listing App</h1>
-      <form id="repoSearchForm">
-
-        <input placeholder="torvalds" id="repoSearchInput" type="text" />
-        <button type="submit">Search</button>
-      </form>
-
-      <!-- <div id="repositories-list">
-        <div class='repositoryItem'>
-          <div class='titleAndUrl'>
-            <h2>github-repositories</h2>
-            <a href src='https://github.com/alexoliveiramartins/github-repositories'>https://github.com/alexoliveiramartins/github-repositories</a>
-          </div>
-          <div class='stars'>
-            <h2>3</h2>
-            <img src="star-svgrepo-com.svg" style="width: 30px; height: 30px;"/>
-          </div>
-        </div>
-      </div> -->
-      
-      <div id="repositories-list"></div>
+      <div class="searchDiv">
+        <form id="repoSearchForm">
+          <input placeholder="torvalds" id="repoSearchInput" type="text" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
